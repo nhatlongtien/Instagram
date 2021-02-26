@@ -14,6 +14,11 @@
 		53F3A97525E9331000D5478F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F3A97425E9331000D5478F /* Assets.xcassets */; };
 		53F3A97825E9331000D5478F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F3A97625E9331000D5478F /* LaunchScreen.storyboard */; };
 		53F3A98A25E934F000D5478F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A98925E934F000D5478F /* MainTabController.swift */; };
+		53F3A98D25E9379F00D5478F /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A98C25E9379F00D5478F /* FeedController.swift */; };
+		53F3A99025E937B400D5478F /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A98F25E937B400D5478F /* SearchController.swift */; };
+		53F3A99325E937C600D5478F /* ImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99225E937C600D5478F /* ImageSelectController.swift */; };
+		53F3A99625E937E000D5478F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99525E937E000D5478F /* NotificationController.swift */; };
+		53F3A99925E937F300D5478F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99825E937F300D5478F /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		53F3A97725E9331000D5478F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53F3A97925E9331000D5478F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53F3A98925E934F000D5478F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		53F3A98C25E9379F00D5478F /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		53F3A98F25E937B400D5478F /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		53F3A99225E937C600D5478F /* ImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectController.swift; sourceTree = "<group>"; };
+		53F3A99525E937E000D5478F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		53F3A99825E937F300D5478F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				53F3A98925E934F000D5478F /* MainTabController.swift */,
+				53F3A98C25E9379F00D5478F /* FeedController.swift */,
+				53F3A98F25E937B400D5478F /* SearchController.swift */,
+				53F3A99225E937C600D5478F /* ImageSelectController.swift */,
+				53F3A99525E937E000D5478F /* NotificationController.swift */,
+				53F3A99825E937F300D5478F /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F3A97025E9330F00D5478F /* ViewController.swift in Sources */,
+				53F3A99025E937B400D5478F /* SearchController.swift in Sources */,
+				53F3A99625E937E000D5478F /* NotificationController.swift in Sources */,
 				53F3A96C25E9330F00D5478F /* AppDelegate.swift in Sources */,
+				53F3A98D25E9379F00D5478F /* FeedController.swift in Sources */,
+				53F3A99925E937F300D5478F /* ProfileController.swift in Sources */,
+				53F3A99325E937C600D5478F /* ImageSelectController.swift in Sources */,
 				53F3A98A25E934F000D5478F /* MainTabController.swift in Sources */,
 				53F3A96E25E9330F00D5478F /* SceneDelegate.swift in Sources */,
 			);
