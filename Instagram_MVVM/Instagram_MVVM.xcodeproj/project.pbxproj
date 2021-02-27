@@ -19,6 +19,8 @@
 		53F3A99325E937C600D5478F /* ImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99225E937C600D5478F /* ImageSelectController.swift */; };
 		53F3A99625E937E000D5478F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99525E937E000D5478F /* NotificationController.swift */; };
 		53F3A99925E937F300D5478F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F3A99825E937F300D5478F /* ProfileController.swift */; };
+		53FE8DE725E9D55F0023325E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE8DE625E9D55F0023325E /* FeedCell.swift */; };
+		53FE8DEA25E9DA670023325E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE8DE925E9DA670023325E /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		53F3A99225E937C600D5478F /* ImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectController.swift; sourceTree = "<group>"; };
 		53F3A99525E937E000D5478F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		53F3A99825E937F300D5478F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		53FE8DE625E9D55F0023325E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		53FE8DE925E9DA670023325E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		53F3A96A25E9330F00D5478F /* Instagram_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				53FE8DEC25E9DA6E0023325E /* Utilities */,
 				53F3A98325E9346400D5478F /* Controller */,
 				53F3A98225E9345800D5478F /* ViewModel */,
 				53F3A98125E9344900D5478F /* View */,
@@ -93,6 +98,7 @@
 		53F3A98125E9344900D5478F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53FE8DE625E9D55F0023325E /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +121,14 @@
 				53F3A99825E937F300D5478F /* ProfileController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		53FE8DEC25E9DA6E0023325E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				53FE8DE925E9DA670023325E /* Extension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F3A97025E9330F00D5478F /* ViewController.swift in Sources */,
+				53FE8DE725E9D55F0023325E /* FeedCell.swift in Sources */,
 				53F3A99025E937B400D5478F /* SearchController.swift in Sources */,
 				53F3A99625E937E000D5478F /* NotificationController.swift in Sources */,
+				53FE8DEA25E9DA670023325E /* Extension.swift in Sources */,
 				53F3A96C25E9330F00D5478F /* AppDelegate.swift in Sources */,
 				53F3A98D25E9379F00D5478F /* FeedController.swift in Sources */,
 				53F3A99925E937F300D5478F /* ProfileController.swift in Sources */,
