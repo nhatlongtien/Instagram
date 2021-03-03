@@ -7,6 +7,26 @@
 
 import Foundation
 import UIKit
+
+extension UIViewController{
+    func configureGradientView(){
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
+        gradient.locations = [0,1]
+        view.layer.addSublayer(gradient)
+        gradient.frame = view.frame
+    }
+}
+extension UIButton{
+    func attributedTitle(firstPart:String, secondPart:String){
+        let atts: [NSAttributedString.Key:Any] = [.foregroundColor:UIColor(white: 1, alpha: 0.87), .font:UIFont.systemFont(ofSize: 16)]
+        let attributedTitle = NSMutableAttributedString(string: firstPart, attributes: atts)
+        let boldAtts:[NSAttributedString.Key:Any] = [.foregroundColor:UIColor(white: 1, alpha: 0.87), .font:UIFont.boldSystemFont(ofSize: 16)]
+        attributedTitle.append(NSAttributedString(string: secondPart, attributes: boldAtts))
+        setAttributedTitle(attributedTitle, for: .normal)
+    }
+}
+
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
@@ -95,4 +115,27 @@ extension UIView {
                bottom: view.bottomAnchor, right: view.rightAnchor)
     }
 }
-
+extension String{
+    //Valadate email
+    func isValadateEmail() -> Bool{
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: self)
+    }
+    //Valadate password
+    func isValadatePasswprd() -> Bool {
+        let passwordRegEX = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#.?!@$%^&*-]).{8,20}$"
+        let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEX)
+        return passwordPred.evaluate(with: self)
+    }
+    //Validate FullName
+    func isValadateFullName() -> Bool{
+        let nameRegEx = "[a-zA-ZàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ\\s]*"
+        let namePred = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+        if self.count >= 6 && self.count <= 50 && namePred.evaluate(with: self){
+            return true
+        }else{
+            return false
+        }
+    }
+}
