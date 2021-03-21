@@ -8,15 +8,39 @@
 import UIKit
 private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController {
+    //MARK: Propoties
+    private var viewModel:FeedViewModel = FeedViewModel()
     //MArk: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        checkUserIsLogin()
     }
     //MARK: Helpers
     func configureUI(){
         collectionView.backgroundColor = .white
         collectionView.register(FeedCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+    }
+    func checkUserIsLogin(){
+        viewModel.checkUserIsLogin { (isLogin) in
+            if !isLogin{
+                let controller = LoginController()
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
+        }
+    }
+    @objc func handleLogout(){
+        viewModel.logout { (isLogout) in
+            if isLogout{
+                let controller = LoginController()
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
+        }
     }
 }
 //MARK: UICollectionDataSource

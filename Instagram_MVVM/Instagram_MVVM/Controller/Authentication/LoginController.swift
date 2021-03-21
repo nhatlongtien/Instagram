@@ -95,7 +95,12 @@ class LoginController: UIViewController {
         if !viewModel.formIsValidate(){
             return
         }
-        print("Login button was pressed")
+        viewModel.login(email: self.emailTextField.text!, pass: self.passwordTextField.text!) { (success) in
+            if success{
+                let controller = MainTabController()
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+        }
     }
     @objc func dontHaveAccountButtonWasPressed(){
         let registrationController = RegistrationController()
