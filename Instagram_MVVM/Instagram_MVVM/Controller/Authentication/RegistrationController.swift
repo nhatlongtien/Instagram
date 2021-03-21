@@ -10,6 +10,7 @@ import UIKit
 class RegistrationController: UIViewController {
     //MARK: Properties
     private var viewModel = RegistrationViewModel()
+    
     private let plusPhotoButton:UIButton = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 140/2
@@ -63,7 +64,6 @@ class RegistrationController: UIViewController {
     
     func configureUI(){
         configureGradientView()
-        
         self.view.addSubview(plusPhotoButton)
         plusPhotoButton.setDimensions(height: 140, width: 140)
         plusPhotoButton.anchor(top: self.view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
@@ -94,20 +94,23 @@ class RegistrationController: UIViewController {
         viewModel.password = self.passwordTextField.text
         viewModel.fullName = self.fullnameTextField.text
         viewModel.userName = self.usernameTextField.text
-        
         if !viewModel.isFormValidate(){
             return
         }
         print("Sign in")
+        viewModel.registerUser()
     }
     @objc func alreadyHaveAnAccountButtonWasPressed(){
         self.navigationController?.popViewController(animated: true)
     }
+    //MARK: Helper Method
+    
 }
 //
 extension RegistrationController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let imagePicker = info[.editedImage] as? UIImage else {return}
+        viewModel.profileImage = imagePicker
         self.plusPhotoButton.setImage(imagePicker.withRenderingMode(.alwaysOriginal), for: .normal)
         self.plusPhotoButton.layer.borderWidth = 2
         self.plusPhotoButton.layer.borderColor = UIColor.white.cgColor

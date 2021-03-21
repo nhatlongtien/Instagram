@@ -7,4 +7,9 @@ target 'Instagram_MVVM' do
 
   # Pods for Instagram_MVVM
 pod 'IQKeyboardManagerSwift'
+# add pods for desired Firebase products
+ pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
 end
